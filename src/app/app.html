@@ -1,0 +1,209 @@
+<div class="fondo">
+<main class="contenido">
+    <div class="barraMenu"> 
+      <h4>KEVIN.DEV</h4> 
+
+      <div class="barra-selector">
+        <div class="barra-sel">
+          <a class="elemento-selector" href="#home">Home</a>
+          <a class="elemento-selector" href="#experiencia">Experience</a>
+          <a class="elemento-selector" href="#portfolio">Portfolio</a>
+          <a class="elemento-selector" href="#skills">Skills</a>
+          <a class="elemento-selector" href="#education">Education</a>
+           <a class="elemento-selector" href="#about">About Me</a>
+          <a class="elemento-selector" href="#contact">Contact</a>
+        </div>
+      </div>
+      
+      <div class="logo-menu"> Download CV </div>
+    </div>
+    <div class="card-perfil" id="home">
+      <div class="informacion-perfil">
+        <img class="foto-perfil" [src]="fondoActual()" alt="Foto de perfil">
+        <div class="info">
+          <h3>{{ fraseActual() }}</h3>
+          <h2 class="nombre"> Kevin Quintero </h2>
+          <p class="descripcion">
+            I’m a Systems Engineering student in my ninth semester, passionate about web application development, especially frontend.
+            I love programming, reading, and learning new technologies that challenge me to grow.
+            I’m focused and dedicated to what I love, and programming is definitely one of my biggest passions.
+            In this portfolio, you’ll find my projects, experiences, and the technologies and skills I’m currently developing.
+          </p>
+          <div class="social-media">
+            <img class="icono-social-github" (click)="linkGithub()" src="—Pngtree—github logo icon_8630451.png">
+            <img class="icono-social-linkedln" (click)="linkLinkedln()" src="—Pngtree—linkedin white icon_3570423.png" >
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      <img class="scroll-img" src="img-scroll.png"> 
+      
+      <section class="section-data" id="experiencia">
+        <div class="header-section">
+          <img src="/experience.svg"> <span> WORK ESPERIENCE</span>
+        </div>
+        <div class="work-div">
+          <div class="work-experience">
+            <div class="work-date" >
+              <h3>Actualy</h3><span>2021</span>
+            </div>
+            <p class="work-text">
+              Although I don’t yet have formal work 
+              experience, I am a Systems Engineering
+              student who has been developing academic 
+              projects for nearly five years. These 
+              projects, carried out across multiple 
+              courses, have allowed me to strengthen 
+              my technical knowledge, problem-solving 
+              abilities, and teamwork skills. Through 
+              this process, I’ve gained solid experience 
+              in development, programming logic, and the 
+              application of software engineering principles
+              — preparing me to contribute effectively in a
+              professional environment.
+            </p>
+          </div>
+          
+          
+        </div>
+      </section>
+
+      <section class="section-data" id="portfolio">
+        <div class="header-section">
+          <img src="/code.svg"><span> PROJECTS</span>
+        </div>
+        <section>
+          Proyectos FrontEnd
+        </section>
+        <section>
+          Proyectos FullStack
+        </section>
+        <section>
+          Protectos Mobile
+        </section>
+      </section>
+
+      <section class="section-data" id="skills">
+        <div class="header-section">
+          <img src="/skills.svg"><span>HABILITIES</span>
+        </div>
+        <div class="card-habilities">
+          <section class="habilities-section">
+            <img class="icon-habilidades" src="habilidades/deslizador.png">
+            <h4>Front-End</h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">HTML</li>
+              <li class="list-group-item">CSS</li>
+              <li class="list-group-item">JavaScript</li>
+              <li class="list-group-item">TypeScript</li>
+              <li class="list-group-item">Angular</li>
+            </ul>
+          </section>
+          <section class="habilities-section">
+            <img class="icon-habilidades" src="habilidades/backend.png">
+            <h4>Back-End</h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Spring Boot</li>
+              <li class="list-group-item">MySQL</li>
+              <li class="list-group-item">Posgrest</li>
+            </ul>
+          </section>
+          <section class="habilities-section">
+            <img class="icon-habilidades" src="habilidades/cremallera.png">
+            <h4>Otros</h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Git</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <section class="section-data" id="education">
+              <div class="header-section">
+          <img src="/school.svg"><span>EDUCATION</span>
+        </div>
+        <div class="education-section">
+          <img class="thumb" src="logo-uis.png" alt="foto" (click)="openLightbox('logo-uis.png')">
+          <div class="overlay" *ngIf="selectedImage" (click)="closeLightbox()">
+            <img class="overlay-img" [src]="selectedImage" (click)="$event.stopPropagation()" alt="enlarged">
+            <button class="close-btn" (click)="closeLightbox()">✕</button>
+          </div>
+            I’m currently in my ninth semester of Systems Engineering at Universidad Industrial de Santander (UIS).
+            Throughout my studies, I’ve worked on projects focused on web development, programming, and database management, enhancing my technical and analytical skills.
+            I’m currently working on my graduation project, applying my knowledge to build functional and innovative technological solutions.
+        </div>
+      </section>
+
+      <section class="section-data" id="about">
+        <div class="header-section">
+          <img src="/aboutme.svg"><span>ABOUT ME</span>
+        </div>
+        <div class="about-description">
+          <p>
+            Hello! I’m Kevin Quintero, a 21-year-old software
+            engineering student from Bucaramanga, Colombia.
+            I’m passionate about transforming ideas
+            into interactive web experiences and constantly 
+            exploring new technologies to challenge myself.
+          </p>
+          <p>
+            Beyond coding, I love reading, sketching, listening
+            to music, and playing football. Traveling is one of
+            my greatest passions — I spent three months in Niagara
+            Falls, New York, which I absolutely loved, and visited 
+            Miami, a city that amazed me with its energy. Colombia 
+            itself is full of incredible towns and hidden gems, and 
+            I enjoy discovering new places wherever I go.
+          </p>
+          <p>
+            Curious, creative, and always eager to learn, I 
+            enjoy blending technology with creativity, 
+            exploring new concepts, and building things that 
+            leave an impact. Welcome to my portfolio — I 
+            hope you enjoy exploring my world of code, 
+            curiosity, and adventures!
+          </p>
+        </div>
+      </section>
+
+      <section class="section-data" id="contact">
+        <div class="header-section">
+          <img src="/contact.svg"><span> CONTACT ME</span>
+        </div>
+        <div class="contactar-ask">
+          <h2 class="pregunta">Are you interested in contacting me?</h2>
+          <form (ngSubmit)="onSubmit($event)" (keydown.enter)="$event.preventDefault()" id="contact-me-form" class="form-contact-full">
+            <div class="name_address">
+              <div class="mb-3 ">
+                <label for="nameForm" class="form-label">Your Name</label>
+                <input type="email" class="form-control contact-form" id="nameForm" placeholder="Enter your name">
+              </div>
+              <div class="mb-3">
+                <label for="emailForm" class="form-label">Email address</label>
+                <input type="text" class="form-control contact-form" id="emailForm" placeholder="Enter your email addres">
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="messageForm" class="form-label">Your Message</label>
+              <textarea
+                class="form-control contact-form"
+                id="messageForm"
+                placeholder="Message"
+                rows="4">
+              </textarea>
+            </div>
+            <button type="submit" class="submit-form"><span>Send Message</span></button>
+          </form>
+          <div class="contact-btn">
+            <button class="btn-mail" (click)="copyEmail()"><img class="mail-icon" src="mail.svg"><span class="mail-text">kevinstevenquintero@gmail.com</span></button>
+            <img class="icono-social-github" (click)="linkGithub()" src="—Pngtree—github logo icon_8630451.png">
+            <img class="icono-social-linkedln" (click)="linkLinkedln()" src="—Pngtree—linkedin white icon_3570423.png" >
+            <img class="icono-social-wasap" (click)="wasap()" src="wasap.png" >
+          </div>
+        </div>
+      </section>
+</main>
+</div>
+<router-outlet/>
