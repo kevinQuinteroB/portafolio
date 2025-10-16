@@ -22,7 +22,7 @@ html, body {
       rgba(107,112,111,0.9),
       rgba(42,42,58,0.6),
       rgba(17,17,17,1.5)),
-    url('/NYC.jpg');
+    url('/assets/NYC.jpg');
   background-size: 150% 200%;
   background-position: 0% 50%;
   background-repeat: no-repeat;
