@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal, OnInit, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import emailjs from 'emailjs-com';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -53,7 +55,15 @@ export class App implements OnInit {
   }
   onSubmit(event: Event) {
   event.preventDefault(); // 🔹 Evita que la página se recargue
-  console.log('Formulario enviado sin recargar la página');
+
+    emailjs.sendForm('service_kjbpbt4', 'template_necd9kk', event.target as HTMLFormElement, 'dbXVRXOde-Jk_eHS7')
+    .then((result) => {
+        console.log('Email sent', result.text);
+        alert('Message sent!');
+    }, (error) => {
+        console.error('Error sending email:', error.text);
+        alert('Failed to send message.');
+    });
   }
 
   selectedImage: string | null = null;

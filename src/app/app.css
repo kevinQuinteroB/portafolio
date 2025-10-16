@@ -258,7 +258,90 @@ main.contenido {
   border-left: 3px solid rgba(255, 255, 255, 0.46);
   padding-left: 20px;
 }
+/*PROYECTOS*/
+.proyectos-web{
+  padding: 1% 2% 3%;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20;
+  justify-content: space-between;
+  align-items: stretch;
+  
+}
+.proyecto{
+  color: aliceblue;
+  background-color: rgba(68, 72, 71, 0.4);
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+  min-height: 320px;
+  justify-content: space-between;
+}
+.card-img-top{
+  width: 225px;
+}
+.card-body {
 
+  background-color: rgb(104, 104, 104, 0.5);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.card-title{
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  flex-grow: 1;
+  height: max-content;
+}
+.habilidades-exp{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+}
+.hablilidad-icon{
+  display: flex;
+  max-width: 20px;
+  max-height: 20px;
+  margin-left: 5px;
+}
+.card-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(104, 104, 104, 0.5);
+}
+.icono-experiencia-github{
+  border-radius: 50px;
+  height: 30px;
+}
+.experience-btn{
+  background-color: transparent;
+  border: 1px solid aliceblue;
+  color: aliceblue;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.experience-btn:hover{
+  background-color: rgb(0, 0, 0,0.3);
+  transform: scale(1.05);
+}
 /*HABILITIES*/
 .card-habilities{
   display: flex;
