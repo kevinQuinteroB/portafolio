@@ -22,7 +22,7 @@ html, body {
       rgba(107,112,111,0.9),
       rgba(42,42,58,0.6),
       rgba(17,17,17,1.5)),
-    url('/portafolio/assets/NYC.jpg');
+    url('https://github.com/kevinQuinteroB/portafolio/blob/main/docs/NYC.jpg?raw=true');
   background-size: 150% 200%;
   background-position: 0% 50%;
   background-repeat: no-repeat;
@@ -563,7 +563,7 @@ main.contenido {
   transition: opacity 0.3s ease;
 }
 .btn-mail:hover .mail-icon {
-  content: url('/portafolio/assets/copy.svg'); 
+  content: url('https://raw.githubusercontent.com/kevinQuinteroB/portafolio/ee5efd3ee780307afaa0a5311af8bd317c4af5c7/docs/copy.svg'); 
 }
 .btn-mail::after {
   content: "Click to Copy";
